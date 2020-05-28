@@ -1,5 +1,6 @@
 package main;
 
+import java.io.Console;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.text.SimpleDateFormat;
@@ -47,9 +48,17 @@ public class Main {
 
             }
         }
+int a1 = pers[0].getyear(), a2 = pers[0].getyear();
+        int b1 = 0, b2 = 0;
+        // Самый старый
+        for (int i =0; i<pers.length;i++)
+            for (int j =0; j<pers.length;j++){
+            if (pers[i].getyear() < pers[j].getyear()) b1 = i;
+            if (pers[i].getyear() > pers[j].getyear()) b2 = i;
 
-        // Самы
-
+        }
+System.out.println("Самый старый + " + pers[b2]);
+            System.out.println( "Самый молодой + " + pers[b1]);
 
         //человек на 1 улице
         for(int i = 0;i<pers.length;  i++ ){
